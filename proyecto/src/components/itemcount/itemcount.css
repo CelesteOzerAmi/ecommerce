@@ -1,0 +1,7 @@
+.card-counter {
+    display: flex;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}

@@ -1,0 +1,14 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    scroll-padding-top: 10px;
+    align-items:center;
+    justify-content:center;
+}
+
+.container > p {
+    padding: 20px;
+    font-size: x-large;
+    font-weight: lighter;
+}
