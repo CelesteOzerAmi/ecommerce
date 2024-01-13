@@ -1,40 +1,18 @@
-import { useState } from "react"
 
+const Form = ({ datosForm, guardarDatosInput, enviarOrden }) => {
 
-const Form = () => {
-    const [nombre, setNombre] = useState("")
-    const [direccion, setDireccion] = useState("")
-    const [email, setEmail] = useState("")
+    return (
+        <form onSubmit={enviarOrden}>
+            <label htmlFor="nombre">nombre</label>
+            <input type="text" id="nombre" name="nombre" value={datosForm.nombre} onChange={guardarDatosInput} />
 
-    const cambiarNombre = (e) => {
-        setNombre(e.target.value)
-    }
+            <label htmlFor="telefono">telefono</label>
+            <input type="text" id="telefono" name="telefono" value={datosForm.telefono} onChange={guardarDatosInput} />
 
-    const cambiarDireccion = (e) => {
-        setDireccion(e.target.value)
-    }
+            <label htmlFor="email">email</label>
+            <input type="email" id="email" name="email" value={datosForm.email} onChange={guardarDatosInput} />
 
-    const cambiarEmail = (e) => {
-        setEmail(e.target.value)
-    }
-
-    const enviarFormulario = (e) => {
-        e.preventDefault()
-        const user = {nombre, direccion, email}
-    }
-
-    return(
-        <form onSubmit={enviarFormulario}>
-            <label>
-                Nombre: <input type="text" value={nombre} onChange={cambiarNombre} />
-            </label>
-            <label>
-                Direccion: <input type="text" value={direccion} onChange={cambiarDireccion} />
-            </label>
-            <label>
-                Email: <input type="email" value={email} onChange={cambiarEmail} />
-            </label>
-            <button type="submit">enviar</button>
+            <button type="submit"> comprar </button>
         </form>
     )
 }
