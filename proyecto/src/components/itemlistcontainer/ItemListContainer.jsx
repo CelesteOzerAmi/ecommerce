@@ -40,10 +40,10 @@ const ItemListContainer = ({ bienvenida }) => {
             cargando ? (
                 <PuffLoader />
             ) : (
-                <div className="container">
-                    <p> {bienvenida} </p>
+                <section className="container">
+                    <h1> {bienvenida} </h1>
                     <ItemList productos={productos} />
-                </div>
+                </section>
             )
         }</>
     );

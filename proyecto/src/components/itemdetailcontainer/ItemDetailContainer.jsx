@@ -1,3 +1,4 @@
+import "./itemdetailcontainer.css"
 import ItemDetail from "../itemdetail/ItemDetail"
 import db from "../../db/db"
 import { useEffect, useState } from "react"
@@ -23,15 +24,19 @@ const ItemDetailContainer = () => {
     }, [id])
 
     return (
-        <> {
-            cargando ? (
-                <PuffLoader />
-            ) : (
-                <div className="container">
-                    <ItemDetail producto={producto} />
-                </div>
-            )
-        }</>
+        <>
+            {
+                cargando ? (
+                    <div className="container">
+                        <PuffLoader />
+                    </div>
+                ) : (
+                    <section className="container">
+                        <ItemDetail producto={producto} />
+                    </section>
+                )
+            }
+        </>
     )
 }
 

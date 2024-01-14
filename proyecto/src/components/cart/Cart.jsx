@@ -1,3 +1,4 @@
+import "./cart.css"
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
@@ -8,25 +9,26 @@ const Cart = () => {
     return (
         carrito.length > 0 ?
             (
-                <div>
+                <section className="section">
                     {
                         carrito.map((producto) => (
-                            <div key={producto.id}>
+                            <div key={producto.id} >
                                 <img src={producto.img} alt="" />
-                                <p>{producto.nombre}</p>
+                                <h1> {producto.nombre} </h1>
                                 <p>{producto.descripcion}</p>
-                                <p>{producto.cantidad}</p>
+                                <strong>{producto.cantidad}</strong>
                                 <button onClick={() => borrarProducto(producto.id)}> eliminar producto </button>
                             </div>
                         ))
                     }
                     <button onClick={vaciarCarrito}>vaciar carrito </button>
                     <Link to="/checkout"> finalizar compra </Link>
-                </div>
+                </section>
             ) : (
-                <h1>
-                    carrito vacio
-                </h1>
+                <div className="container">
+                    <h2>tu carrito está vacio!</h2>
+                    <Link to={"/"}>ir a la tienda</Link>
+                </div>
             )
     )
 }

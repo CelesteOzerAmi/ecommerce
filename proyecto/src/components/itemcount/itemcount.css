@@ -1,7 +1,9 @@
-.card-counter {
+.card-counter>button{
+    width: 120px;
+}
+
+.card-counter>div{
     display: flex;
-    padding: 2px;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap:25px;
 }

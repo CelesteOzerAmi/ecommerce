@@ -18,7 +18,6 @@ const ItemCount = ({ stock, agregarCarrito }) => {
         }
 
         return (
-
             <div className="card-counter">
                 <div>
                     <button onClick={restar}>-</button>

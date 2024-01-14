@@ -13,8 +13,8 @@ function App() {
       <CartProvider>
         <NavBar />
         <Routes>
-          <Route path="/" element={< ItemListContainer bienvenida=" Bienvenido a Mike ✔" />} />
-          <Route path="/categorias/:categoria" element={<ItemListContainer bienvenida=" Bienvenido a Mike ✔" />} />
+          <Route path="/" element={< ItemListContainer bienvenida="Mike ✔" />} />
+          <Route path="/categorias/:categoria" element={<ItemListContainer bienvenida="Mike ✔" />} />
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />

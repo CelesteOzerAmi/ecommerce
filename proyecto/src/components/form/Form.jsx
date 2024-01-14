@@ -1,4 +1,4 @@
-
+import "./form.css"
 const Form = ({ datosForm, guardarDatosInput, enviarOrden }) => {
 
     return (

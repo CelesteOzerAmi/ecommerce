@@ -1,3 +1,4 @@
+import "./itemdetail.css"
 import { CartContext } from "../../context/CartContext"
 import { useState, useContext } from "react"
 import { Link } from "react-router-dom";

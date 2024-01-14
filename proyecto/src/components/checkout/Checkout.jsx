@@ -1,3 +1,4 @@
+import "./checkout.css"
 import Form from "../form/Form"
 import db from "../../db/db"
 import { useContext, useState } from "react"
@@ -41,7 +42,7 @@ const Checkout = () => {
     }
 
     return (
-        <div>
+        <div className="form">
             {idOrden ? (
                 <div>
                     <h2>orden generada correctamente</h2>
