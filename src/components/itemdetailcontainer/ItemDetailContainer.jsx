@@ -7,7 +7,7 @@ import { doc, getDoc } from "firebase/firestore"
 import { PuffLoader } from "react-spinners"
 
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({ bienvenida }) => {
     const [producto, setProducto] = useState({})
     const [cargando, setCargando] = useState(true)
     const { id } = useParams()
@@ -32,6 +32,7 @@ const ItemDetailContainer = () => {
                     </div>
                 ) : (
                     <section className="container">
+                        <h1> {bienvenida}</h1>
                         <ItemDetail producto={producto} />
                     </section>
                 )
