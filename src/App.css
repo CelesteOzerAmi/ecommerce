@@ -1,5 +1,5 @@
 body  {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(240, 233, 218);
+  padding: 0px;
+  margin: 0px;
+  background: linear-gradient(246deg, rgb(234, 232, 246) 1%, rgb(235, 229, 232) 100%);
 }

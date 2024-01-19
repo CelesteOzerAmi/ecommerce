@@ -33,6 +33,7 @@ const ItemDetail = ({ producto }) => {
                     <ItemCount
                         stock={producto.stock}
                         agregarCarrito={agregarCarrito}
+                        className="itemcount"
                     />
                 )
                 }

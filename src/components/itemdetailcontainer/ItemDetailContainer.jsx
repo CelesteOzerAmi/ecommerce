@@ -10,6 +10,7 @@ import { PuffLoader } from "react-spinners"
 const ItemDetailContainer = ({ bienvenida }) => {
     const [producto, setProducto] = useState({})
     const [cargando, setCargando] = useState(true)
+    const [productoExiste, setProductoExiste] = useState(false)
     const { id } = useParams()
 
     useEffect(() => {
@@ -17,6 +18,9 @@ const ItemDetailContainer = ({ bienvenida }) => {
         getDoc(productoRef)
             .then((respuesta) => {
                 const productoDb = { id: respuesta.id, ...respuesta.data() }
+                if(!respuesta.exists()) {
+                    setProductoExiste(true)
+                }
                 setProducto(productoDb)
             })
             .catch((err) => console.log(err))
@@ -31,10 +35,16 @@ const ItemDetailContainer = ({ bienvenida }) => {
                         <PuffLoader />
                     </div>
                 ) : (
+                    productoExiste ? (
+                        <div>
+                            producto no existe
+                        </div>
+                    ) : (
                     <section className="container">
                         <h1> {bienvenida}</h1>
                         <ItemDetail producto={producto} />
                     </section>
+                    )
                 )
             }
         </>

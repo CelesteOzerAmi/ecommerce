@@ -1,13 +1,17 @@
 .cartwidget {
-    display: flex;
-    margin: 5px;
-    margin-right: 40px;
-    gap: 15px;
-    align-items: top;
-    justify-content: end;
+    margin-right: 30px;
+    width: 50px;
+
 }
 
-.cartwidget > img { 
-    width: 40px;
-    height: 40px;
+.cartwidget>a{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+    font-size: x-large;
+}
+
+.cartwidget>a>img {
+    width: 90%;
 }

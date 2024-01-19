@@ -1,9 +1,10 @@
-.card-counter>button{
-    width: 120px;
-}
 
 .card-counter>div{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap:25px;
+}
+.card-counter>button{
+    width: 100%;
 }

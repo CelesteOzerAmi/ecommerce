@@ -12,7 +12,7 @@ const Cart = () => {
                 <section className="section">
                     {
                         carrito.map((producto) => (
-                            <div key={producto.id} >
+                            <div key={producto.id} className="cartelement">
                                 <img src={producto.img} alt="" />
                                 <h1> {producto.nombre} </h1>
                                 <p>{producto.descripcion}</p>
@@ -21,8 +21,10 @@ const Cart = () => {
                             </div>
                         ))
                     }
-                    <button onClick={vaciarCarrito}>vaciar carrito </button>
-                    <Link to="/checkout"> finalizar compra </Link>
+                    <div className="cartoptions">
+                        <button onClick={vaciarCarrito}>vaciar carrito </button>
+                        <Link to="/checkout"> finalizar compra </Link>
+                    </div>
                 </section>
             ) : (
                 <div className="container">

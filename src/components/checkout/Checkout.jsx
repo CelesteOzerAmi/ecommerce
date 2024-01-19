@@ -12,6 +12,7 @@ const Checkout = () => {
         nombre: "",
         telefono: "",
         email: "",
+        emailconfirmar: "",
     })
 
     const [idOrden, setIdOrden] = useState(null)
@@ -24,13 +25,21 @@ const Checkout = () => {
 
     const enviarOrden = (e) => {
         e.preventDefault()
-        const orden = {
+        if (datosForm.email === datosForm.emailconfirmar){
+            const orden = {
+            fecha: new Date(),
             comprador: { ...datosForm },
             productos: [...carrito],
             total: totalPrecio()
         }
         subirOrden(orden)
+    } else {
+        alert("error email")
     }
+        
+    }
+
+
 
     const subirOrden = (orden) => {
         const ordenesRef = collection(db, "ordenes")
