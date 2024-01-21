@@ -1,8 +1,7 @@
 .item-card {
+    width: 85%;
     display: flex;
     flex-flow: wrap;
-    margin: 80px;
-    margin-top: 10px;
-    gap: 95px;
+    gap: 70px;
     justify-content: space-evenly;
 }

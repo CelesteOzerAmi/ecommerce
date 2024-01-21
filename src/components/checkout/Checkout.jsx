@@ -25,18 +25,17 @@ const Checkout = () => {
 
     const enviarOrden = (e) => {
         e.preventDefault()
-        if (datosForm.email === datosForm.emailconfirmar){
+        if (datosForm.email === datosForm.emailconfirmar) {
             const orden = {
-            fecha: new Date(),
-            comprador: { ...datosForm },
-            productos: [...carrito],
-            total: totalPrecio()
+                fecha: new Date(),
+                comprador: { ...datosForm },
+                productos: [...carrito],
+                total: totalPrecio()
+            }
+            subirOrden(orden)
+        } else {
+            alert("error email")
         }
-        subirOrden(orden)
-    } else {
-        alert("error email")
-    }
-        
     }
 
 
@@ -51,13 +50,14 @@ const Checkout = () => {
     }
 
     return (
-        <div className="form">
+        <>
             {idOrden ? (
-                <div>
-                    <h2>orden generada correctamente</h2>
-                    <p>nro de orden: {idOrden}</p>
-                </div>
-
+                <section className="checkout-confirmado">
+                    <h2>tu orden fue generada con éxito!</h2>
+                    <h3>el ID de la orden es: <strong>{idOrden}</strong> </h3>
+                    <p>te enviamos las indicaciones de entrega al correo que nos proporcionaste.</p>
+                    <h4>gracias por preferirnos!</h4>
+                </section>
             ) : (
                 <Form
                     datosForm={datosForm}
@@ -65,7 +65,7 @@ const Checkout = () => {
                     enviarOrden={enviarOrden}
                 />
             )}
-        </div>
+        </>
     )
 }
 

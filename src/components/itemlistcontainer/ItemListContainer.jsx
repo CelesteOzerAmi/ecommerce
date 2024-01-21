@@ -38,9 +38,11 @@ const ItemListContainer = ({ bienvenida }) => {
     return (
         <> {
             cargando ? (
-                <PuffLoader />
+                <div className="cargando">
+                    <PuffLoader/>
+                </div>
             ) : (
-                <section className="container">
+                <section className="list-container">
                     <h1> {bienvenida} </h1>
                     <ItemList productos={productos} />
                 </section>

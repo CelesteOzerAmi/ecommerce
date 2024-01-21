@@ -1,10 +1,9 @@
 .card-detail {
-    padding: 3%;
-    padding-bottom: 5%;
+    padding: 2% ; 
     background-color: white;
-    border: 2px solid rgb(240, 228, 202);
-    width: 15%;
-    height: 26rem;
+    border: 2px solid rgb(211, 203, 203);
+    width: 20%;
+    height: 35rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,20 +12,22 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.card-detail>h1{
+    font-style: italic;
+}
+
 .card-detail>img{
-    width: 75%;
+    width: 200px;
 }
 
 
 .card-detail>.toggle{
-    width: 65%;
+    width: 90%;
 }
 .card-detail>.toggle>p{
-    width: 100%;
     font-size: xx-small;
     font-style: italic;
-    padding: 10%;
-
+    padding: 1%;
 }
 
 .card-detail>.toggle>a{

@@ -28,26 +28,26 @@ const ItemDetailContainer = ({ bienvenida }) => {
     }, [id])
 
     return (
-        <>
+        <section className="detail-container">
             {
                 cargando ? (
-                    <div className="container">
+                    <div className="cargando">
                         <PuffLoader />
                     </div>
                 ) : (
-                    productoExiste ? (
+                    productoExiste ? ( 
                         <div>
                             producto no existe
                         </div>
                     ) : (
-                    <section className="container">
+                    <section className="detail-section">
                         <h1> {bienvenida}</h1>
                         <ItemDetail producto={producto} />
                     </section>
                     )
                 )
             }
-        </>
+        </section>
     )
 }
 

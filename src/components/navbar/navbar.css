@@ -1,9 +1,9 @@
 .navbar {
     display: flex;
-    position: sticky;
+    position: fixed ;
     top: 0;
     width: 100%;
-    padding: 12px;
+    padding: 5px;
     justify-content: space-between;
     background-color: rgba(248, 245, 245, 0.47);
     border-bottom: 1px solid rgb(211, 203, 203);
@@ -18,17 +18,12 @@
     
 }
 
-.navbar>ul>li{
-    font-size: large;
-    font-family: verda;
-}
-
 .navbar>.brand{
     align-self: center;
 }
 
 .navbar>.brand>img {
     margin-left: 15px;
-    width: 80px;
+    width: 70px;
     height: 30px;
 }

@@ -2,4 +2,27 @@ body  {
   padding: 0px;
   margin: 0px;
   background: linear-gradient(246deg, rgb(234, 232, 246) 1%, rgb(235, 229, 232) 100%);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+a{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  padding-bottom: 2%;
+  font-weight: 500;
+}
+
+.cargando{
+  padding: 10%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }

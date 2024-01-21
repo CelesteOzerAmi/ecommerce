@@ -23,7 +23,7 @@ const CartProvider = ({ children }) => {
 
 
     const enCarrito = (idProducto) => {
-        carrito.some((producto) => producto.id === idProducto)
+        return carrito.some((producto) => producto.id === idProducto)
     }
 
     const totalCantidad = () => {

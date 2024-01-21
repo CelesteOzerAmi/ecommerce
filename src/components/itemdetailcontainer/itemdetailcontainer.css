@@ -1,5 +1,13 @@
-
-.container {
-    box-sizing: content-box;
-    margin: 45px;
+.detail-container{
+    padding: 5%;
 }
+
+.detail-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-evenly;
+    gap: 20px;
+}
+
