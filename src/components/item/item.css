@@ -14,8 +14,16 @@
 }
 
 .card:hover {
-    color: black;
     border: 1px solid black;
+    h2 {
+        color: black
+    }
+    strong {
+        color: black
+    }
+    img {
+        border-color: black;
+    }
 }
 
 .card > h2 {

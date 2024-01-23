@@ -4,10 +4,11 @@ import db from "../../db/db"
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import { addDoc, collection } from "firebase/firestore"
+import Swal from "sweetalert2"
 
 
 
-const Checkout = ({bienvenida}) => {
+const Checkout = ({ bienvenida }) => {
     const [datosForm, setDatosForm] = useState({
         nombre: "",
         telefono: "",
@@ -34,7 +35,13 @@ const Checkout = ({bienvenida}) => {
             }
             subirOrden(orden)
         } else {
-            alert("error email")
+            Swal.fire({
+                title: 'error',
+                text: 'repetir email',
+                icon: 'warning',
+                confirmButtonText: 'ok',
+                width: '25%',
+            })
         }
     }
 
@@ -44,6 +51,16 @@ const Checkout = ({bienvenida}) => {
         const ordenesRef = collection(db, "ordenes")
         addDoc(ordenesRef, orden)
             .then((res) => {
+                {
+                    Swal.fire({
+                        title: 'listo!',
+                        text: 'tu orden fue registrada con éxito',
+                        icon: 'success',
+                        confirmButtonText: 'ok',
+                        width: '25%',
+                        padding: '1%'
+                    })
+                }
                 setIdOrden(res.id)
                 vaciarCarrito()
             })
