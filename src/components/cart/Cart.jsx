@@ -4,13 +4,14 @@ import { CartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
 
 const Cart = ({titulo}) => {
-    const { carrito, borrarProducto, vaciarCarrito } = useContext(CartContext)
+    const { carrito, borrarProducto, vaciarCarrito, totalPrecio} = useContext(CartContext)
 
     return (
         carrito.length > 0 ?
             (
                 <section className="section">
                     <h1 className="titulo">{titulo}</h1>
+                    <p>total: ${totalPrecio()} </p>
                     <div className="cartoptions">
                         <button onClick={vaciarCarrito} className="vaciar">vaciar carrito </button>
                         <Link to="/checkout" className="finalizar" >finalizar compra </Link>
@@ -19,10 +20,9 @@ const Cart = ({titulo}) => {
                     {
                         carrito.map((producto) => (
                             <div key={producto.id} className="cartelement">
+                                <h2> {producto.nombre} </h2>
                                 <img src={producto.img} alt="" />
-                                <h1> {producto.nombre} </h1>
-                                <p>{producto.descripcion}</p>
-                                <strong>{producto.cantidad}</strong>
+                                <p>estás llevando <strong>{producto.cantidad}</strong> unidades</p>
                                 <button onClick={() => borrarProducto(producto.id)}> eliminar producto </button>
                             </div>
                         ))

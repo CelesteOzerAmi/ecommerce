@@ -5,14 +5,13 @@
 
 .cartwidget>a{
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: end;
-    gap: 10px;
+    gap: 5px;
     font-size: small;
     font-style: oblique;
 }
 
 .cartwidget>a>img {
-    width: 80%;
-    padding-top: 5%;
+    width: 70%;
 }

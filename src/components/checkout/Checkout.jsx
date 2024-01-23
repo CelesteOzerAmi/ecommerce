@@ -7,7 +7,7 @@ import { addDoc, collection } from "firebase/firestore"
 
 
 
-const Checkout = () => {
+const Checkout = ({bienvenida}) => {
     const [datosForm, setDatosForm] = useState({
         nombre: "",
         telefono: "",
@@ -53,10 +53,11 @@ const Checkout = () => {
         <>
             {idOrden ? (
                 <section className="checkout-confirmado">
+                    <h1>{bienvenida}</h1>
                     <h2>tu orden fue generada con éxito!</h2>
-                    <h3>el ID de la orden es: <strong>{idOrden}</strong> </h3>
+                    <p>el id de la orden es: <strong>{idOrden}</strong> </p>
                     <p>te enviamos las indicaciones de entrega al correo que nos proporcionaste.</p>
-                    <h4>gracias por preferirnos!</h4>
+                    <h3>gracias por preferirnos!</h3>
                 </section>
             ) : (
                 <Form

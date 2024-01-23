@@ -13,11 +13,11 @@ function App() {
       <CartProvider>
         <NavBar />
         <Routes>
-          <Route path="/" element={< ItemListContainer bienvenida="Mike ✔" />} />
-          <Route path="/categorias/:categoria" element={<ItemListContainer bienvenida="Mike ✔" />} />
-          <Route path="/detalle/:id" element={<ItemDetailContainer  bienvenida="Mike ✔" />} />
-          <Route path="/cart" element={<Cart titulo="Tu carrito" />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/" element={< ItemListContainer bienvenida="mike" />} />
+          <Route path="/categorias/:categoria" element={<ItemListContainer bienvenida="mike" />} />
+          <Route path="/detalle/:id" element={<ItemDetailContainer  bienvenida="mike" />} />
+          <Route path="/cart" element={<Cart titulo="tu carrito" />} />
+          <Route path="/checkout" element={<Checkout bienvenida="mike" />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </CartProvider>

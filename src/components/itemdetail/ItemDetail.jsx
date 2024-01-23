@@ -19,9 +19,9 @@ const ItemDetail = ({ producto }) => {
             className="card-detail"
             key={producto.id}
         >
+            <h2> {producto.nombre} </h2>
             <img src={producto.img} alt="" />
-            <h1> {producto.nombre} </h1>
-            <p>{producto.descripcion}</p>
+            <h3>{producto.descripcion}</h3>
             <strong>${producto.precio}</strong>
             <div className="toggle">
                 {toggle ? (
@@ -30,14 +30,16 @@ const ItemDetail = ({ producto }) => {
                         <Link to="/cart">ir al carrito</Link>
                     </>
                 ) : (
-                    <ItemCount
-                        stock={producto.stock}
-                        agregarCarrito={agregarCarrito}
-                        className="itemcount"
-                    />
+                    <>
+                        <ItemCount
+                            stock={producto.stock}
+                            agregarCarrito={agregarCarrito}
+                            className="itemcount"
+                        />
+                        <h4>{producto.stock} unidades disponibles</h4>
+                    </>
                 )
                 }
-                <p>{producto.stock} unidades disponibles</p>
             </div>
         </div>
     )

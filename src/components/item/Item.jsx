@@ -20,19 +20,17 @@ const Item = ({ producto }) => {
     }
 
     return (
-        <div
-            style={estiloCard}
-            onMouseOver={handleMouseOver}
-            onMouseLeave={handleMouseLeave}
-            className="card"
-            key={producto.id}
-        >
-            <img src={producto.img} alt="" />
-            <h1> {producto.nombre} </h1>
-            <p>{producto.descripcion}</p>
-            <strong>${producto.precio}</strong>
-            <Link to={`/detalle/${producto.id}`}>ver más</Link>
-        </div>
+        <Link to={`/detalle/${producto.id}`}
+                style={estiloCard}
+                onMouseOver={handleMouseOver}
+                onMouseLeave={handleMouseLeave}
+                className="card"
+                key={producto.id}
+            >
+                <h2> {producto.nombre} </h2>
+                <img src={producto.img} alt="" />
+                <strong>${producto.precio}</strong>
+        </Link>
     )
 }
 

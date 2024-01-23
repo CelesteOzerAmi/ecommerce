@@ -1,24 +1,41 @@
+
 .card { 
-    width: 17%;
-    height: 25rem;
-    padding: 1%;
+    width: 15%;
+    height: 18rem;
+    padding: 8px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     background-color: white;
     border: 1px solid rgb(211, 203, 203);
+    border-radius: 10px;
+    text-decoration: none
 }
 
-.card > p {
-    font-style:italic;
+.card:hover {
+    color: black;
+    border: 1px solid black;
 }
 
-.card > h1 {
+.card > h2 {
+    color: rgb(62, 61, 61);
+    font-size: larger;
+    margin: 0;
     font-weight: lighter;
+    font-size: 120%;
+}
+
+.card > strong {
+    font-size: 110%;
+    color: gray;
 }
 
 .card > img {
-    width: 140px;
-    height: 150px;
+    padding: 13%;
+    border-top: 1px solid rgb(211, 203, 203);
+    border-bottom: 1px solid rgb(211, 203, 203);
+    border-radius: 4px;
+    width: 170px;
+    height: 170px;
 }

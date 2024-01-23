@@ -2,13 +2,6 @@
     margin: 5%;
     display: flex;
     flex-direction: column;
-    font-style: italic;
-
-    h1 {
-        align-self: center;
-        font-size: x-large;
-        border-bottom: 1px solid black;
-    }
 
     .form {
         width: 18%;
@@ -24,15 +17,24 @@
         }
 
         input {
-            height: 15px;
+            height: 18px;
+            border: 1px solid grey;
+            border-radius: 8px;
         }
 
         button {
             margin: 6%;
             height: 2rem;
-            width: 100px;
+            width: 120px;
             align-self: center;
             font-style: italic;
+            border: 1px solid grey;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            color: black;
+            border: 1px solid black;
         }
     }
 }

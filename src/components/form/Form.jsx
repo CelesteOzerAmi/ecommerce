@@ -3,7 +3,7 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrden }) => {
 
     return (
         <section className="form-section">
-            <h1>Completá los campos para finalizar la compra</h1>
+            <h1>completá los campos para finalizar la compra</h1>
             <form onSubmit={enviarOrden} className="form">
                 <label htmlFor="nombre">nombre</label>
                 <input type="text" id="nombre" name="nombre" value={datosForm.nombre} onChange={guardarDatosInput} required />
@@ -17,7 +17,7 @@ const Form = ({ datosForm, guardarDatosInput, enviarOrden }) => {
                 <label htmlFor="emailconfirmar">confirmar email</label>
                 <input type="email" id="emailconfirmar" name="emailconfirmar" value={datosForm.emailconfirmar} onChange={guardarDatosInput} />
 
-                <button type="submit"> comprar </button>
+                <button type="submit"> enviar orden </button>
             </form>
         </section>
     )
